@@ -1,0 +1,89 @@
+{
+    "info": {
+      "_postman_id": "d2f14a4d-8a3b-4f91-8c45-4c3c6a9f7d3c",
+      "name": "Pantopia API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Create Account",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"Test Account\"\n}"
+          },
+          "url": {
+            "raw": "{{base_url}}/accounts",
+            "host": ["{{base_url}}"],
+            "path": ["accounts"]
+          }
+        }
+      },
+      {
+        "name": "Get Account",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "{{base_url}}/accounts/1",
+            "host": ["{{base_url}}"],
+            "path": ["accounts", "1"]
+          }
+        }
+      },
+      {
+        "name": "List Accounts",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "{{base_url}}/accounts?page_id=1&page_size=10",
+            "host": ["{{base_url}}"],
+            "path": ["accounts"],
+            "query": [
+              { "key": "page_id", "value": "1" },
+              { "key": "page_size", "value": "10" }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Update Account",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"Updated Account Name\"\n}"
+          },
+          "url": {
+            "raw": "{{base_url}}/accounts/1",
+            "host": ["{{base_url}}"],
+            "path": ["accounts", "1"]
+          }
+        }
+      },
+      {
+        "name": "Delete Account",
+        "request": {
+          "method": "DELETE",
+          "url": {
+            "raw": "{{base_url}}/accounts/1",
+            "host": ["{{base_url}}"],
+            "path": ["accounts", "1"]
+          }
+        }
+      }
+    ]
+  }
+  
